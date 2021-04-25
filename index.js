@@ -33,6 +33,7 @@
     RESULT.addEventListener('click', () => {
         if (checkValid(INPUT_VALUE.value)) {
             INPUT_VALUE.value = 0;
+            EXPRESSION.innerText = '';
             return;
         }
         INPUT_VALUE.value = eval(INPUT_VALUE.value);
