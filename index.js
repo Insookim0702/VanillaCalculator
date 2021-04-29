@@ -5,7 +5,6 @@
     const DELETE = document.querySelector('.delete');
     const EXPRESSION = document.querySelector('.expression');
     const ALERTBAR = document.querySelector('.alert_bar');
-
     const NUMBER_ARRAY = document.querySelectorAll('.number');
     const COMMAND_ARRAY = document.querySelectorAll('.operator');
     INPUT_VALUE.value = 0;
@@ -30,15 +29,14 @@
         INPUT_VALUE.value = 0;
     });
 
-    RESULT.addEventListener('click', () => {
-        if (checkValid(INPUT_VALUE.value)) {
-            INPUT_VALUE.value = 0;
-            EXPRESSION.innerText = '';
-            deleteAlarm();
-            return;
+    INPUT_VALUE.addEventListener('keyup', (event) => {
+        if (event.keyCode === 13) {
+            calculate();
         }
-        EXPRESSION.innerText = INPUT_VALUE.value;
-        INPUT_VALUE.value = eval(INPUT_VALUE.value);
+    });
+
+    RESULT.addEventListener('click', () => {
+        calculate();
     });
 
     DELETE.addEventListener('click', () => {
@@ -78,5 +76,19 @@
         setTimeout(() => {
             ALERTBAR.style.display = 'none';
         }, 1000);
+    }
+
+    function calculate() {
+        if (INPUT_VALUE.value === '') {
+            return;
+        }
+        if (checkValid(INPUT_VALUE.value)) {
+            INPUT_VALUE.value = 0;
+            EXPRESSION.innerText = '';
+            deleteAlarm();
+            return;
+        }
+        EXPRESSION.innerText = INPUT_VALUE.value;
+        INPUT_VALUE.value = eval(INPUT_VALUE.value);
     }
 })();
