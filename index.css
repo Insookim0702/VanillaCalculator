@@ -7,6 +7,7 @@ body {
     color: aliceblue;
     font-family: 'Do Hyeon', sans-serif;
     min-width: 412px;
+    margin: 0;
 }
 
 .alert_bar {
@@ -38,11 +39,9 @@ input {
 }
 
 .calc {
-    /* background-color: aqua; */
-    /* display: grid; */
-    /* grid-template-rows: 1fr, 4fr; */
     padding: 15px;
     max-width: 412px;
+    min-height: 100vh;
     margin: 0 auto;
 }
 
@@ -55,7 +54,6 @@ input {
 .number_box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(4, 1fr); */
 }
 
 .text {
@@ -103,6 +101,7 @@ p {
     font-size: 2rem;
     margin: auto 0;
 }
+
 .expression {
     width: 412px;
     text-align: left;
@@ -110,7 +109,27 @@ p {
     word-break: break-all;
 }
 
+a {
+    color: aliceblue;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background: #222f3e;
+    color: aliceblue;
+}
+
 @media (min-width: 1024px) {
+    .calc {
+        padding: 15px;
+        max-width: 412px;
+        min-height: 84vh;
+        margin: 0 auto;
+    }
+
     .text:hover {
         background-color: aquamarine;
         color: black;
@@ -119,5 +138,14 @@ p {
     .result:hover {
         background-color: white;
         color: black;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5rem;
+        background: #222f3e;
+        color: aliceblue;
     }
 }
