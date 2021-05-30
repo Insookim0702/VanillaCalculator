@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet" />
+        <title>Vanilla Calculator</title>
+    <script defer src="main.js"></script></head>
+    <body>
+        <div class="alert_bar"></div>
+        <header>
+            <h1>바닐라 계산기</h1>
+        </header>
+        <div class="calc">
+            <div>
+                <p class="expression"></p>
+                <input type="text" />
+            </div>
+            <div class="control">
+                <div class="number_box">
+                    <div class="number text" id="1">1</div>
+                    <div class="number text" id="2">2</div>
+                    <div class="number text" id="3">3</div>
+                    <div class="number text" id="4">4</div>
+                    <div class="number text" id="5">5</div>
+                    <div class="number text" id="6">6</div>
+                    <div class="number text" id="7">7</div>
+                    <div class="number text" id="8">8</div>
+                    <div class="number text" id="9">9</div>
+                    <div class="number text" id="0">0</div>
+                    <div class="number text" id="00">00</div>
+                    <div class="number text" id=".">.</div>
+                </div>
+                <div class="command_box">
+                    <div>
+                        <div class="operator text" id="+">+</div>
+                        <div class="operator text" id="-">-</div>
+                        <div class="operator text" id="/">/</div>
+                        <div class="operator text" id="*">*</div>
+                    </div>
+                    <div class="command_result">
+                        <div class="command_result_text">
+                            <p class="delete" id="delete">←</p>
+                        </div>
+                        <div class="command_result_text">
+                            <p class="clear" id="clear">Clear</p>
+                        </div>
+                        <div class="result" id="result">=</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h3>about me</h3>
+            <ul>
+                <li><a href="">블로그</a></li>
+                <li><a href="">이력서</a></li>
+                <li><a href="">페이스북</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
