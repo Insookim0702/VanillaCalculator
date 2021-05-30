@@ -1,3 +1,4 @@
+import './index.css';
 (() => {
     const INPUT_VALUE = document.querySelector('input');
     const CLEAR = document.querySelector('.clear');
